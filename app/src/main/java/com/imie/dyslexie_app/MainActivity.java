@@ -1,6 +1,5 @@
 package com.imie.dyslexie_app;
 
-import androidx.annotation.MainThread;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.ClipData;
@@ -20,11 +19,11 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
 
         // Ouvre l'activité contenant le texte de correction
-        Button explicationButton = (Button) this.findViewById(R.id.explication);
+        Button explicationButton = (Button) this.findViewById(R.id.explanationButton);
         // Lance la récitation du google Home
-        ImageButton googleHomeButton = (ImageButton) this.findViewById(R.id.imageButton);
+        ImageButton googleHomeButton = (ImageButton) this.findViewById(R.id.vocalButton);
         // Lance l'appel à l'Api de correction
-        ImageButton correctionButton = (ImageButton) this.findViewById(R.id.imageButton3);
+        ImageButton correctionButton = (ImageButton) this.findViewById(R.id.correctionButton);
 
     }
 
@@ -32,17 +31,17 @@ public class MainActivity extends AppCompatActivity {
     {
         final int id = v.getId();
         switch (id){
-            case R.id.explication:
+            case R.id.explanationButton:
                 Intent correctionActivity = new Intent(MainActivity.this, CorrectionActivity.class);
                 startActivity(correctionActivity);
                 break;
-            case R.id.imageButton:
+            case R.id.vocalButton:
                 // Lance la récitation du google Home
                 ClipboardManager clipboard = (ClipboardManager) getSystemService(Context.CLIPBOARD_SERVICE);
                 ClipData clip = ClipData.newPlainText("répète", "how are you today");
                 clipboard.setPrimaryClip(clip);
                 startActivity(new Intent(Intent.ACTION_VOICE_COMMAND).setFlags(Intent.FLAG_ACTIVITY_NEW_TASK));
-            case R.id.imageButton3:
+            case R.id.correctionButton:
                 // Lance l'appel à l'Api de correction
         }
 
