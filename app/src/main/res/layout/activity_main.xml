@@ -62,7 +62,8 @@
         app:layout_constraintEnd_toEndOf="parent"
         tools:ignore="MissingConstraints"
         tools:src="@drawable/paper"
-        tools:srcCompat="@tools:sample/avatars" />
+        tools:srcCompat="@tools:sample/avatars"
+        android:onClick="onClick"/>
 
     <ImageButton
         android:id="@+id/vocalButton"
@@ -81,7 +82,8 @@
         app:layout_constraintStart_toStartOf="parent"
         tools:ignore="MissingConstraints"
         tools:src="@drawable/megaphone"
-        tools:srcCompat="@tools:sample/avatars" />
+        tools:srcCompat="@tools:sample/avatars"
+        android:onClick="onClick"/>
 
     <TextView
         android:id="@+id/errorWord"

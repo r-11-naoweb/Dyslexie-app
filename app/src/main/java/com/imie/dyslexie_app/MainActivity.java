@@ -43,6 +43,7 @@ public class MainActivity extends AppCompatActivity {
                 startActivity(new Intent(Intent.ACTION_VOICE_COMMAND).setFlags(Intent.FLAG_ACTIVITY_NEW_TASK));
             case R.id.correctionButton:
                 // Lance l'appel à l'Api de correction
+                break;
         }
 
     }
