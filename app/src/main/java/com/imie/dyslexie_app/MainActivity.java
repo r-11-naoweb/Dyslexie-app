@@ -3,6 +3,9 @@ package com.imie.dyslexie_app;
 import androidx.annotation.MainThread;
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.ClipData;
+import android.content.ClipboardManager;
+import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
@@ -33,6 +36,14 @@ public class MainActivity extends AppCompatActivity {
                 Intent correctionActivity = new Intent(MainActivity.this, CorrectionActivity.class);
                 startActivity(correctionActivity);
                 break;
+            case R.id.imageButton:
+                // Lance la récitation du google Home
+                ClipboardManager clipboard = (ClipboardManager) getSystemService(Context.CLIPBOARD_SERVICE);
+                ClipData clip = ClipData.newPlainText("répète", "how are you today");
+                clipboard.setPrimaryClip(clip);
+                startActivity(new Intent(Intent.ACTION_VOICE_COMMAND).setFlags(Intent.FLAG_ACTIVITY_NEW_TASK));
+            case R.id.imageButton3:
+                // Lance l'appel à l'Api de correction
         }
 
     }

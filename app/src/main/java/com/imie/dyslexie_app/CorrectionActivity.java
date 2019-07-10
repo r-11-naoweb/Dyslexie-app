@@ -25,7 +25,7 @@ public class CorrectionActivity extends AppCompatActivity {
 
 
 
-        ListView listView = (ListView) findViewById(R.id.correctionText);
+        //ListView listView = (ListView) findViewById(R.id.correctionText);
         //listView.setAdapter();
 
     }
