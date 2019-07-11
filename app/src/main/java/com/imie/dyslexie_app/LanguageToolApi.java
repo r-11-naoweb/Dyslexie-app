@@ -1,14 +1,14 @@
 package com.imie.dyslexie_app;
 
-/*import java.util.ArrayList;
+import java.util.ArrayList;
 import java.util.List;
 import org.languagetool.JLanguageTool;
 import org.languagetool.language.French;
 import org.languagetool.rules.RuleMatch;
-import java.io.IOException;*/
+import java.io.IOException;
 
 public class LanguageToolApi {
-    /*private ArrayList<Integer> listErrorFirstCharacter = new ArrayList<Integer>();
+    private ArrayList<Integer> listErrorFirstCharacter = new ArrayList<Integer>();
     private ArrayList<Integer> listErrorLastCharacter = new ArrayList<Integer>();
     private ArrayList<String> listError = new ArrayList<String>();
     private ArrayList<String> listMessage = new ArrayList<String>();
@@ -50,5 +50,5 @@ public class LanguageToolApi {
 
     public ArrayList<List<String>> getCorrectionList() {
         return this.correctionList;
-    }*/
+    }
 }
