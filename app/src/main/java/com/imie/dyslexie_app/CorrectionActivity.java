@@ -4,6 +4,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.RecyclerView;
 
 import android.annotation.SuppressLint;
+import android.content.Intent;
 import android.os.Bundle;
 import android.text.method.ScrollingMovementMethod;
 import android.widget.ArrayAdapter;
@@ -39,8 +40,15 @@ public class CorrectionActivity extends AppCompatActivity {
 
         listView.setAdapter(whatever);
 
-        //ListView listView = (ListView) findViewById(R.id.correctionText);
-        //listView.setAdapter();
+        Intent intent = getIntent();
+        if (intent != null){
+            String str = "";
+            if (intent.hasExtra("indexError")){
+                str = intent.getStringExtra("indexError");
+            }
+            TextView textView = (TextView) findViewById(R.id.errorWord);
+            textView.setText(str);
+        }
 
     }
 }

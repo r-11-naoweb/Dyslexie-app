@@ -40,6 +40,7 @@
         android:ems="10"
         android:gravity="top"
         android:hint="Texte à corriger"
+        android:text="azea zeze azeazeaze azeazeaz"
         android:inputType="textMultiLine"
         app:layout_constraintBottom_toTopOf="@+id/correctionWord"
         app:layout_constraintEnd_toEndOf="parent"
