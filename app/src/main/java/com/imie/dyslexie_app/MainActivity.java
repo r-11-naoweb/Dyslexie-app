@@ -45,18 +45,17 @@ public class MainActivity extends AppCompatActivity {
 
                 /*Intent correctionActivity = new Intent(MainActivity.this, CorrectionActivity.class);
                 startActivity(correctionActivity);*/
-                String erreur = "aze";
+                String erreur = "17h";
                 errorWord.setText(erreur);
 
-                String correction = "azerty";
+                String correction = "17 h";
                 correctionWord.setText(correction);
             }
         };
 
-        spanString.setSpan(clickableSpan, 0, 3, Spanned.SPAN_EXCLUSIVE_EXCLUSIVE);
+        spanString.setSpan(clickableSpan, 7, 9, Spanned.SPAN_EXCLUSIVE_EXCLUSIVE);
         editText.setText(spanString);
         editText.setMovementMethod(LinkMovementMethod.getInstance());
-
     }
 
     public void onClick(View v)
