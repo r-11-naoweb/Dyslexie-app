@@ -10,46 +10,40 @@
         android:id="@+id/labelExplanation"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="24dp"
-        android:layout_marginTop="8dp"
-        android:layout_marginBottom="8dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="72dp"
         android:text="Explication"
         android:textColor="#000000"
         android:textSize="25sp"
-        app:layout_constraintBottom_toTopOf="@+id/explicationText"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.981"
         tools:ignore="MissingConstraints" />
 
     <TextView
         android:id="@+id/labelOthersCorrection"
         android:layout_width="wrap_content"
-        android:layout_height="34dp"
+        android:layout_height="0dp"
         android:layout_marginStart="8dp"
-        android:layout_marginTop="428dp"
+        android:layout_marginTop="24dp"
         android:text="Autres corrections"
         android:textColor="#000000"
         android:textSize="25sp"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/explanationText"
         tools:ignore="MissingConstraints" />
 
     <TextView
-        android:id="@+id/explicationText"
+        android:id="@+id/explanationText"
         android:layout_width="0dp"
-        android:layout_height="250dp"
+        android:layout_height="150dp"
         android:layout_marginStart="8dp"
         android:layout_marginTop="8dp"
         android:layout_marginEnd="8dp"
-        android:layout_marginBottom="36dp"
-        android:text="Lorem adaz aze aze az  eaz aze aze aze  aez eza aze aze eza zea za eaz zae zae za e aze za ze za az az zae az e aze az  zefzezefzfe zefzefzefezf zefezfefzze zeffezfezzefefzfez zefefzefzezfefz zefezfefz zefezfefz zefezfezf zeezefz ezfzfeef zefezezf zefzezefzfe zefzefzefezf zefezfefzze zeffezfezzefefzfez zefefzefzezfefz zefezfefz zefezfefz zefezfezf zeezefz ezfzfeef zefezezf zefzezefzfe zefzefzefezf zefezfefzze zeffezfezzefefzfez zefefzefzezfefz zefezfefz zefezfefz zefezfezf zeezefz ezfzfeef zefezezf zefzezefzfe zefzefzefezf zefezfefzze zeffezfezzefefzfez zefefzefzezfefz zefezfefz zefezfefz zefezfezf zeezefz ezfzfeef zefezezf zefzezefzfe zefzefzefezf zefezfefzze zeffezfezzefefzfez zefefzefzezfefz zefezfefz zefezfefz zefezfezf zeezefz ezfzfeef zefezezf zefzezefzfe zefzefzefezf zefezfefzze zeffezfezzefefzfez zefefzefzezfefz zefezfefz zefezfefz zefezfezf zeezefz ezfzfeef zefezezf zefzezefzfe zefzefzefezf zefezfefzze zeffezfezzefefzfez zefefzefzezfefz zefezfefz zefezfefz zefezfezf zeezefz ezfzfeef zefezezf zefzezefzfe zefzefzefezf zefezfefzze zeffezfezzefefzfez zefefzefzezfefz zefezfefz zefezfefz zefezfezf zeezefz ezfzfeef zefezezf zefzezefzfe zefzefzefezf zefezfefzze zeffezfezzefefzfez zefefzefzezfefz zefezfefz zefezfefz zefezfezf zeezefz ezfzfeef zefezezf zefzezefzfe zefzefzefezf zefezfefzze zeffezfezzefefzfez zefefzefzezfefz zefezfefz zefezfefz zefezfezf zeezefz ezfzfeef zefezezf zefzezefzfe zefzefzefezf zefezfefzze zeffezfezzefefzfez zefefzefzezfefz zefezfefz zefezfefz zefezfezf zeezefz ezfzfeef zefezezf e aze az ea ze az az azzaezaezeazea az za eaz zaea zezeaeza zazae aez  zae aze aze aze"
+        android:text="Faute de frappe possible trouvée"
         android:textSize="25sp"
-        app:layout_constraintBottom_toTopOf="@+id/labelOthersCorrection"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="1.0"
+        app:layout_constraintTop_toBottomOf="@+id/labelExplanation"
         tools:ignore="MissingConstraints" />
 
     <TextView
@@ -91,13 +85,34 @@
     <ListView
         android:id="@+id/othersCorrectionsList"
         android:layout_width="0dp"
-        android:layout_height="0dp"
+        android:layout_height="250dp"
         android:layout_marginVertical="10dp"
         android:layout_marginTop="8dp"
-        android:layout_marginBottom="8dp"
-        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/labelOthersCorrection" />
+        app:layout_constraintTop_toBottomOf="@+id/labelOthersCorrection" />
+
+    <ImageButton
+        android:id="@+id/vocalButton"
+        android:layout_width="90dp"
+        android:layout_height="67dp"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="32dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginBottom="36dp"
+        android:background="@null"
+        android:onClick="onClick"
+        android:src="@drawable/megaphone"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.482"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/othersCorrectionsList"
+        tools:ignore="MissingConstraints"
+        tools:src="@drawable/megaphone"
+        tools:srcCompat="@tools:sample/avatars" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

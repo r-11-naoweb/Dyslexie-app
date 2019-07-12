@@ -42,18 +42,18 @@ public class MainActivity extends AppCompatActivity {
         ClickableSpan clickableSpan = new ClickableSpan() {
             @Override
             public void onClick(View view) {
-
                 /*Intent correctionActivity = new Intent(MainActivity.this, CorrectionActivity.class);
                 startActivity(correctionActivity);*/
-                String erreur = "17h";
+                String erreur = "Cliqez";
                 errorWord.setText(erreur);
 
-                String correction = "17 h";
+                String correction = "Cliquez";
                 correctionWord.setText(correction);
+
             }
         };
 
-        spanString.setSpan(clickableSpan, 7, 9, Spanned.SPAN_EXCLUSIVE_EXCLUSIVE);
+        spanString.setSpan(clickableSpan, 0, 6, Spanned.SPAN_EXCLUSIVE_EXCLUSIVE);
         editText.setText(spanString);
         editText.setMovementMethod(LinkMovementMethod.getInstance());
     }
@@ -64,13 +64,16 @@ public class MainActivity extends AppCompatActivity {
         switch (id){
             case R.id.explanationButton:
                 Intent correctionActivity = new Intent(MainActivity.this, CorrectionActivity.class);
-                correctionActivity.putExtra("indexError", "aze");
+                correctionActivity.putExtra("indexError", "Cliqez");
+                correctionActivity.putExtra("indexCorrection", "Cliquez");
                 startActivity(correctionActivity);
                 break;
             case R.id.vocalButton:
-                // Lance la récitation du google Home
+                // Lance la lecture par google assistant
                 ClipboardManager clipboard = (ClipboardManager) getSystemService(Context.CLIPBOARD_SERVICE);
-                ClipData clip = ClipData.newPlainText("répète", "how are you today");
+                final EditText editText = (EditText) this.findViewById((R.id.inputText)) ;
+
+                ClipData clip = ClipData.newPlainText("lecture_texte", editText.getText().toString());
                 clipboard.setPrimaryClip(clip);
                 startActivity(new Intent(Intent.ACTION_VOICE_COMMAND).setFlags(Intent.FLAG_ACTIVITY_NEW_TASK));
             case R.id.correctionButton:
